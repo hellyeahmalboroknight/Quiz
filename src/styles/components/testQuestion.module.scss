@@ -1,0 +1,41 @@
+@use "../base/colors.scss" as colors;
+@import "~bootstrap";
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  max-width: 500px !important;
+  margin: 15px auto !important;
+  & h2 {
+    text-align: center;
+}
+ & ul {
+  list-style: "👅";
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  & li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    & input {
+        @extend .form-check-input
+    }
+  }
+}
+  & .btns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & button {
+    background-color: colors.$primary-100;
+    color: colors.$text-100;
+    &:disabled {
+      background-color: colors.$primary-100;
+    }
+  }
+}
+
+
